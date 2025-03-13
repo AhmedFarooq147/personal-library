@@ -53,7 +53,8 @@ def add_book():
             }
             library.append(item)
             save_library(library)
-            st.toast(f"Book {title} added successfully!")
+            st.success(f"Book {title} added successfully!")
+            time.sleep(2)
             st.rerun()
             
         else:
@@ -73,6 +74,7 @@ elif choice == "Remove Book":
             library = [book for book in library if book["title"] != selected_title]
             save_library(library)
             st.success(f"Book {selected_title} removed successfully!")
+            time.sleep(2)
             st.rerun()
     else:
         st.warning("No books in the library!")
