@@ -53,7 +53,7 @@ def add_book():
             }
             library.append(item)
             save_library(library)
-            st.success(f"Book {title} added successfully!")
+            st.toast(f"Book {title} added successfully!")
             st.rerun()
             
         else:
